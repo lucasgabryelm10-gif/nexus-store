@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexus Store</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: white;
+        overflow-x: hidden;
+        background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1a0033);
+        background-size: 400% 400%;
+        animation: gradientBG 12s ease infinite;
+    }
+
+    @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    header {
+        text-align: center;
+        padding: 60px 20px 30px;
+    }
+
+    .logo {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .logo span {
+        color: #b366ff;
+    }
+
+    .cloud {
+        font-size: 50px;
+    }
+
+    .btn-main {
+        margin-top: 30px;
+        padding: 15px 40px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(45deg, #7b2ff7, #b366ff);
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn-main:hover {
+        transform: scale(1.05);
+    }
+
+    .products {
+        display: none;
+        padding: 40px 20px 80px;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .card {
+        background: rgba(255,255,255,0.05);
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 15px rgba(179,102,255,0.2);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 25px rgba(179,102,255,0.5);
+    }
+
+    .buy-btn {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background: #7b2ff7;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        cursor: pointer;
+    }
+
+</style>
+</head>
+<body>
+
+<header>
+    <div class="cloud">☁️⚡</div>
+    <div class="logo">Nexus <span>Store</span></div>
+    <button class="btn-main" onclick="showProducts()">Comprar Produtos</button>
+</header>
+
+<section class="products" id="products">
+    <div class="card">
+        <h2>Nexus Internal</h2>
+        <button class="buy-btn">Comprar</button>
+    </div>
+
+    <div class="card">
+        <h2>Nexus External</h2>
+        <button class="buy-btn">Comprar</button>
+    </div>
+
+    <div class="card">
+        <h2>Nexus Trick</h2>
+        <button class="buy-btn">Comprar</button>
+    </div>
+
+    <div class="card">
+        <h2>Nexus iOS</h2>
+        <button class="buy-btn">Comprar</button>
+    </div>
+
+    <div class="card">
+        <h2>Nexus Android</h2>
+        <button class="buy-btn">Comprar</button>
+    </div>
+</section>
+
+<script>
+function showProducts() {
+    document.getElementById("products").style.display = "block";
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
